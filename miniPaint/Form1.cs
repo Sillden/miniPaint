@@ -15,6 +15,24 @@ namespace miniPaint
         public Form1()
         {
             InitializeComponent();
+            openFileDialog.Filter = "Grafika BMP|*.bmp|Grafika PNG|*.png|Grafika JPG|*.jpg";
+            saveFileDialog.Filter = "Grafika BMP|*.bmp|Grafika PNG|*.png|Grafika JPG|*.jpg";
+        }
+
+        private void otwórzToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxMyImage.Image = Image.FromFile(openFileDialog.FileName);
+            }
+        }
+
+        private void zapiszJakoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxMyImage.Image.Save(saveFileDialog.FileName);
+            }
         }
     }
 }
