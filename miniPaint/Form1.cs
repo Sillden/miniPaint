@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +33,21 @@ namespace miniPaint
         {
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                pictureBoxMyImage.Image.Save(saveFileDialog.FileName);
+                string extension = Path.GetExtension(saveFileDialog.FileName);
+                ImageFormat imageFormat = ImageFormat.Bmp; ;
+                switch (extension)
+                {
+                    case ".bmp":
+                        imageFormat = ImageFormat.Bmp;
+                        break;
+                    case ".png":
+                        imageFormat = ImageFormat.Png;
+                        break;
+                    case ".jpg":
+                        imageFormat = ImageFormat.Jpg;
+                        break;
+                }
+                pictureBoxMyImage.Image.Save(saveFileDialog.FileName, imageFormat);
             }
         }
     }
