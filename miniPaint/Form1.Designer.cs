@@ -62,24 +62,27 @@
             // otwórzToolStripMenuItem
             // 
             this.otwórzToolStripMenuItem.Name = "otwórzToolStripMenuItem";
-            this.otwórzToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.otwórzToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.otwórzToolStripMenuItem.Text = "Otwórz";
             this.otwórzToolStripMenuItem.Click += new System.EventHandler(this.otwórzToolStripMenuItem_Click);
             // 
             // zapiszJakoToolStripMenuItem
             // 
             this.zapiszJakoToolStripMenuItem.Name = "zapiszJakoToolStripMenuItem";
-            this.zapiszJakoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zapiszJakoToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.zapiszJakoToolStripMenuItem.Text = "Zapisz jako";
             this.zapiszJakoToolStripMenuItem.Click += new System.EventHandler(this.zapiszJakoToolStripMenuItem_Click);
             // 
             // pictureBoxMyImage
             // 
-            this.pictureBoxMyImage.Location = new System.Drawing.Point(71, 74);
+            this.pictureBoxMyImage.Location = new System.Drawing.Point(70, 58);
             this.pictureBoxMyImage.Name = "pictureBoxMyImage";
-            this.pictureBoxMyImage.Size = new System.Drawing.Size(290, 243);
+            this.pictureBoxMyImage.Size = new System.Drawing.Size(388, 305);
             this.pictureBoxMyImage.TabIndex = 1;
             this.pictureBoxMyImage.TabStop = false;
+            this.pictureBoxMyImage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxMyImage_MouseDown);
+            this.pictureBoxMyImage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxMyImage_MouseMove);
+            this.pictureBoxMyImage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBoxMyImage_MouseUp);
             // 
             // openFileDialog
             // 
